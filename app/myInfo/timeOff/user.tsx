@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
@@ -31,10 +31,7 @@ export default function User({ avatar, name }: UserInterface) {
         <div className="flex items-center justify-between mb-[35px]">
           <div className="flex items-center  relative">
             <Avatar className="w-[150px] h-[150px] absolute left-8 -top-6 max-[730px]:w-[100px] max-[730px]:h-[100px] max-[730px]:left-0 max-[425px]:w-[60px] max-[425px]:h-[60px] max-[425px]:top-0 z-10 ">
-              <AvatarImage
-                src={avatar}
-                alt="@shadcn"
-              />
+              <AvatarImage src={avatar} alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <span className="font-semibold text-[28px] ml-[260px] max-[730px]:ml-[110px] max-[425px]:text-xl">
@@ -74,6 +71,7 @@ export default function User({ avatar, name }: UserInterface) {
             {/* burger */}
             <div className="hidden max-[600px]:block">
               <Sheet>
+                <SheetTitle className="p-0 m-0"></SheetTitle>
                 <SheetTrigger>
                   <EllipsisVertical />
                 </SheetTrigger>

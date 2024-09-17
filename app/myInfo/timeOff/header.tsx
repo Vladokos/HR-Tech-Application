@@ -4,7 +4,12 @@ import Link from "next/link";
 import { Search, Settings, CircleHelp, Bell, Menu } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface HeaderInterface {
   avatar: string;
@@ -68,7 +73,7 @@ export default function Header({ avatar }: HeaderInterface) {
             {/* burger */}
             <Sheet>
               <SheetTitle className="p-0 m-0">
-
+                
               </SheetTitle>
               <SheetTrigger>
                 <Menu className="hidden max-[1200px]:block max-[1200px]:mb-4" />
