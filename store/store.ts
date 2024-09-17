@@ -33,7 +33,6 @@ export const useDataStore = create<Store>((set) => ({
         mutation: LOGIN_MUTATION,
         variables: { email, password },
       });
-      console.log(data);
       set({ status: "success", data: data });
     } catch (error) {
       set({ status: "error" });
